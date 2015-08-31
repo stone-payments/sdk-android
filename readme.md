@@ -3,7 +3,7 @@ SDK V2 de integração - Android
 
 Conteúdo:
 
-/JARs/Stone/ contém um único .jar com todas as seguintes dependências:
+[/JARs/Stone/](https://github.com/stone-pagamentos/sdk-android-V2/tree/master/JARs/Stone) contém um único .jar com todas as seguintes dependências:
 <br>
 
 <i>Para envio de email</i>
@@ -23,5 +23,5 @@ Conteúdo:
 <i>XML</i>
 * Xstream_v1.4.7.jar
 
-/JARs/Dependências/ contém todas as libs mencionadas e o jar de integração da Stone.<br>
+[/JARs/Dependências/](https://github.com/stone-pagamentos/sdk-android-V2/tree/master/JARs) contém todas as libs mencionadas e o jar de integração da Stone.<br>
 Esta caso você possua essas libs no seu projeto, você tem a opção de remove-las e utilizar o jar da pasta /JARs/Stone/ ou adicionar as dependências e o jar de integração da Stone.
