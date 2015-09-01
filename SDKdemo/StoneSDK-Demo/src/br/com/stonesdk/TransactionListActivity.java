@@ -3,6 +3,7 @@ package br.com.stonesdk;
 import android.support.v7.app.ActionBarActivity;
 
 import java.security.PublicKey;
+import java.util.ArrayList;
 import java.util.List;
 
 import android.app.AlertDialog;
@@ -20,6 +21,8 @@ import stone.application.interfaces.StoneCallbackInterface;
 import stone.database.transaction.TransactionDAO;
 import stone.database.transaction.TransactionObject;
 import stone.providers.CancellationProvider;
+import stone.providers.PrintProvider;
+import stone.utils.PrintObject;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 
@@ -67,7 +70,23 @@ public class TransactionListActivity extends ActionBarActivity implements OnItem
                .setPositiveButton(R.string.list_dialog_print, new DialogInterface.OnClickListener() {
                    public void onClick(DialogInterface dialog, int id) {
                        // lógica da impressão
-                	   Toast.makeText(getApplicationContext(), "Em breve...", 1).show();
+                	   List<PrintObject> listToPrint = new ArrayList<PrintObject>();
+                	  for(int i = 0; i < 10; i++){
+                		  listToPrint.add(new PrintObject("teste"+i, PrintObject.MEDIUM, PrintObject.CENTER));
+                	  }
+                	   final PrintProvider printProvider = new PrintProvider(TransactionListActivity.this, listToPrint);
+                	   printProvider.setWorkInBackground(false);
+                	   printProvider.setDialogMessage("Imprimindo...");
+                	   printProvider.setConnectionCallback(new StoneCallbackInterface() {
+						public void onSuccess() {
+							Toast.makeText(getApplicationContext(), "Impressão realizada com sucesso", 1).show();
+           					finish();
+						}
+						public void onError() {
+							Toast.makeText(getApplicationContext(), "Um erro ocorreu durante a impressão", 1).show();
+						}
+					});
+                	printProvider.execute();
                    }
                })
                .setNegativeButton(R.string.list_dialog_cancel, new DialogInterface.OnClickListener() {

@@ -43,19 +43,19 @@ public class SendEmailActivity extends ActionBarActivity {
 				String emailTo = sendEmailText.getText().toString().trim();
 				
 				// sdk aqui.
-				EmailClient emailClient = new EmailClient("smtp.office365.com", 
-														  "noreply@stone.com.br", 
-														  "8]5Ah}aGxC",
-														  emailTo, 
-														  "Comprovante Stone 2.0");
-				emailClient.setSport("587");
-				emailClient.setSmtpPport("587");
+				EmailClient emailClient = new EmailClient("seu smtp aqui", 
+														  "seu e-mail noReply aqui", 
+														  "sua senha aqui",
+														  emailTo, //o e-mail digitado pelo usuário
+														  "Assunto do email");
+				emailClient.setSport("587"); // S Port
+				emailClient.setSmtpPport("587"); // SMTP P Port
 				String receipt = emailTextSample; 
-				// emailClient.receiptAsHtml(getApplicationContext(), ((TransactionObject) transactionListView.getAdapter().getItem((int) id)).getIdFromBase());
+				
 				SendEmailProvider sendEmailProvider = new SendEmailProvider(SendEmailActivity.this, emailClient, receipt);
-				sendEmailProvider.setWorkInBackground(false);
+				sendEmailProvider.setWorkInBackground(false); // para dar feedback ao usuario ou nao.
 				sendEmailProvider.setDialogMessage("Enviando comprovante..");
-				sendEmailProvider.setConnectionCallback(new StoneCallbackInterface() {
+				sendEmailProvider.setConnectionCallback(new StoneCallbackInterface() { //chamada de retorno
 					public void onSuccess() {
 						Toast.makeText(getApplicationContext(), "Enviado com sucesso", Toast.LENGTH_LONG).show();
 					}

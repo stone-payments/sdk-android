@@ -88,7 +88,7 @@ public class DevicesActivity extends ActionBarActivity implements OnItemClickLis
 		BluetoothConnectionProvider bluetoothConnectionProvider = new BluetoothConnectionProvider(DevicesActivity.this, pinpadSelected);
 		bluetoothConnectionProvider.setDialogMessage("Criando conexao com o pinpad selecionado"); // mensagem do dialog
 		bluetoothConnectionProvider.setWorkInBackground(false); // diz que tera um feedback para o usuario
-		bluetoothConnectionProvider.setConnectionCallback(new StoneCallbackInterface() { // callback 
+		bluetoothConnectionProvider.setConnectionCallback(new StoneCallbackInterface() { // chamada de retorno 
 			
 			public void onSuccess() {
 				Toast.makeText(getApplicationContext(), "Pinpad conectado", 1).show();
