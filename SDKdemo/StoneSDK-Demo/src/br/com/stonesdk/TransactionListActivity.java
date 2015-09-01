@@ -2,9 +2,13 @@ package br.com.stonesdk;
 
 import android.support.v7.app.ActionBarActivity;
 
+import java.security.PublicKey;
 import java.util.List;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.bluetooth.BluetoothDevice;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -56,25 +60,39 @@ public class TransactionListActivity extends ActionBarActivity implements OnItem
 		return super.onOptionsItemSelected(item);
 	}
 
-	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-		
-		String[] arrayIdAtPositionZero = listView.getAdapter().getItem(position).toString().split("=");
-		final int transacionId = Integer.parseInt(arrayIdAtPositionZero[0].trim());
-		
-		final CancellationProvider cancellationProvider = new CancellationProvider(TransactionListActivity.this, transacionId);
-		cancellationProvider.setWorkInBackground(false);
-		cancellationProvider.setDialogMessage("Cancelando...");
-		cancellationProvider.setConnectionCallback(new StoneCallbackInterface() {
-			
-			public void onSuccess() {
-				Toast.makeText(getApplicationContext(), cancellationProvider.getMessageFromAuthorize(), 1).show();
-				finish();
-			}
-			
-			public void onError() {
-				Toast.makeText(getApplicationContext(), "Um erro ocorreu durante o cancelamento com a transacao de id:" + transacionId, 1).show();
-			}
-		});
-		cancellationProvider.execute();
+	public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(R.string.list_dialog_title)
+        	   .setMessage(R.string.list_dialog_message)
+               .setPositiveButton(R.string.list_dialog_print, new DialogInterface.OnClickListener() {
+                   public void onClick(DialogInterface dialog, int id) {
+                       // lógica da impressão
+                	   Toast.makeText(getApplicationContext(), "Em breve...", 1).show();
+                   }
+               })
+               .setNegativeButton(R.string.list_dialog_cancel, new DialogInterface.OnClickListener() {
+                   public void onClick(DialogInterface dialog, int id) {
+                       	// lógica do cancelamento
+                	   	String[] arrayIdAtPositionZero = listView.getAdapter().getItem(position).toString().split("=");
+               			final int transacionId = Integer.parseInt(arrayIdAtPositionZero[0].trim());
+               		
+               			final CancellationProvider cancellationProvider = new CancellationProvider(TransactionListActivity.this, transacionId);
+               			cancellationProvider.setWorkInBackground(false); // para dar feedback ao usuario ou nao.
+               			cancellationProvider.setDialogMessage("Cancelando...");
+               			cancellationProvider.setConnectionCallback(new StoneCallbackInterface() { // chamada de retorno.
+               				public void onSuccess() {
+               					Toast.makeText(getApplicationContext(), cancellationProvider.getMessageFromAuthorize(), 1).show();
+               					finish();
+               				}
+               				
+               				public void onError() {
+               					Toast.makeText(getApplicationContext(), "Um erro ocorreu durante o cancelamento com a transacao de id:" + transacionId, 1).show();
+               				}
+               			});
+               			cancellationProvider.execute();
+                   }
+               });
+        builder.create();
+		builder.show();
 	}
 }
