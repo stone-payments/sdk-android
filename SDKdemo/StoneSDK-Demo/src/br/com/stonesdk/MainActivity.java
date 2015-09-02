@@ -32,7 +32,8 @@ public class MainActivity extends ActionBarActivity {
         
         String[] options = new String[] { "Dispositivos pareados", 
                                           "Fazer uma transação",
-                                          "Listar transações" 
+                                          "Listar transações",
+                                          "Envio de e-mail"
                                         };
         
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, android.R.id.text1, options);
@@ -55,6 +56,10 @@ public class MainActivity extends ActionBarActivity {
 				case 2:
 					Intent transactionListIntent = new Intent(MainActivity.this, TransactionListActivity.class);
 					MainActivity.this.startActivity(transactionListIntent);
+					break;
+				case 3:
+					Intent sendEmailIntent = new Intent(MainActivity.this, SendEmailActivity.class);
+					MainActivity.this.startActivity(sendEmailIntent);
 					break;
 				default:
 					break;

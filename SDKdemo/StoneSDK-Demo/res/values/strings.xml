@@ -19,6 +19,7 @@
     <string name="title_activity_transaction_list">Lista de transações</string>
     <string name="title_activity_validation">Tela inicial</string>
     <string name="title_activity_main">Stone SDK Demonstração</string>
+    <string name="title_activity_send_email">Enviar e-mail</string>
 
     <!-- Main Activity strings -->
     <string name="transaction_enter_value">Digite o valor</string>
@@ -31,6 +32,13 @@
     <string name="transaction_issuer">Parcelado emissor</string>
     <string name="transaction_no_installments">Nº de parcelas</string>
 
+    <!-- Transaction List Activity strings -->
+    <string name="list_dialog_title">Selecione uma ação</string>
+    <string name="list_dialog_message">Informe se deseja cancelar ou imprimir a transação selecionada.</string>
+    <string name="list_dialog_cancel">Cancelar transação</string>
+    <string name="list_dialog_print">Imprimir transação</string>
+    
+    <!-- Transaction Activity strings -->
     <string-array name="installments_array">
         <item>À Vista</item>
         <item>2x sem juros</item>
@@ -57,6 +65,10 @@
         <item>12x com juros</item>
     </string-array>
 
-    
+     <!-- Send Email Activity strings -->
+    <string name="email_description">Digite um texto abaixo: </string>
+    <string name="email_hint">nome@seuemail.com.br</string>
+    <string name="email_send_description">Digite seu e-mail: </string>
+    <string name="email_send">Enviar e-mail</string>
 
 </resources>
