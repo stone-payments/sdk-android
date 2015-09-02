@@ -25,3 +25,14 @@ Conteúdo:
 
 [/JARs/Dependências/](https://github.com/stone-pagamentos/sdk-android-V2/tree/master/JARs) contém todas as libs mencionadas e o jar de integração da Stone.<br>
 Esta caso você possua essas libs no seu projeto, você tem a opção de remove-las e utilizar o jar da pasta /JARs/Stone/ ou adicionar as dependências e o jar de integração da Stone.
+
+Change Log
+=======================
+
+Conteúdo:
+
+<i><b>v2.0.1</b></i>
+* [!] Hotfix no QR Code com Pinpads da Ingenico;
+* [!] Pequenas correções na transação (update na coluna 'request_id' da transação);
+* [+] Adicionada a função que o integrador poder enviar o ITK (identificador único da transação) pelo método 'setInitiatorTransactionKey(SEU_ITK_AQUI_STRING)' do objeto StoneTransaction;
+* [#] Assinatura do objeto PrintProvider mudou, agora você precisa informar qual pinpad você está utilizando, se estiver conectado a somente um Pinpad, passe 'GlobalInformations.getPinpadFromListAt(0)'
