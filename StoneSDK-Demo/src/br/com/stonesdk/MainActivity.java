@@ -50,9 +50,15 @@ public class MainActivity extends ActionBarActivity {
 					MainActivity.this.startActivity(devicesIntent);
 					break;
 				case 1:
-					Intent transactionIntent = new Intent(MainActivity.this, TransactionActivity.class);
-					MainActivity.this.startActivity(transactionIntent);
+					// verifica se o bluetooth esta ligado e se existe algum pinpad conectado
+					if(GlobalInformations.getPinpadListSize() != null && GlobalInformations.getPinpadListSize() > 0) {
+						Intent transactionIntent = new Intent(MainActivity.this, TransactionActivity.class);
+						MainActivity.this.startActivity(transactionIntent);
 					break;
+					} else {
+						Toast.makeText(getApplicationContext(), "Conecte-se a um pinpad.", 1).show();
+						break;
+					}
 				case 2:
 					Intent transactionListIntent = new Intent(MainActivity.this, TransactionListActivity.class);
 					MainActivity.this.startActivity(transactionListIntent);

@@ -31,6 +31,13 @@ Change Log
 
 Conteúdo:
 
+<i><b>v2.0.2</b></i>
+* [!] Hotfix na impressão com Ingenico (Logo da Stone);
+* [!] Melhores tratamentos no bluetooth;
+* [!] Melhorias na impressão (tratamentos para status diferente de 00);
+* [&] Correções na Demo (Extra)
+
+
 <i><b>v2.0.1</b></i>
 * [!] Hotfix no QR Code com Pinpads da Ingenico;
 * [!] Pequenas correções na transação (update na coluna 'request_id' da transação);

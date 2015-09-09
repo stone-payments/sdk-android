@@ -69,28 +69,35 @@ public class TransactionListActivity extends ActionBarActivity implements OnItem
         builder.setTitle(R.string.list_dialog_title)
         	   .setMessage(R.string.list_dialog_message)
                .setPositiveButton(R.string.list_dialog_print, new DialogInterface.OnClickListener() {
-                   public void onClick(DialogInterface dialog, int id) {
-                       // lógica da impressão
-                	   List<PrintObject> listToPrint = new ArrayList<PrintObject>();
-                	  for(int i = 0; i < 10; i++){
-                		  listToPrint.add(new PrintObject("teste"+i, PrintObject.MEDIUM, PrintObject.CENTER));
-                	  }
-                	   // GlobalInformations.getPinpadFromListAt(0) e o pinpad conectado, que esta na posicao zero.
-                	   final PrintProvider printProvider = new PrintProvider(TransactionListActivity.this, listToPrint, GlobalInformations.getPinpadFromListAt(0));
-                	   printProvider.setWorkInBackground(false);
-                	   printProvider.setDialogMessage("Imprimindo...");
-                	   printProvider.setConnectionCallback(new StoneCallbackInterface() {
-						public void onSuccess() {
-							Toast.makeText(getApplicationContext(), "Impressão realizada com sucesso", 1).show();
-           					finish();
+					public void onClick(DialogInterface dialog, int id) {
+						try {
+							// lógica da impressão
+							List<PrintObject> listToPrint = new ArrayList<PrintObject>();
+							for (int i = 0; i < 10; i++) {
+								listToPrint.add(new PrintObject("Teste de impressão linha " + i, PrintObject.MEDIUM, PrintObject.CENTER));
+							}
+							// GlobalInformations.getPinpadFromListAt(0) eh o pinpad conectado, que esta na posicao zero.
+							final PrintProvider printProvider = new PrintProvider(TransactionListActivity.this, listToPrint, GlobalInformations.getPinpadFromListAt(0));
+							printProvider.setWorkInBackground(false);
+							printProvider.setDialogMessage("Imprimindo...");
+							printProvider.setConnectionCallback(new StoneCallbackInterface() {
+								public void onSuccess() {
+									Toast.makeText(getApplicationContext(), "Impressão realizada com sucesso", 1).show();
+									finish();
+								}
+								public void onError() {
+									Toast.makeText(getApplicationContext(), "Um erro ocorreu durante a impressão", 1).show();
+								}
+							});
+							printProvider.execute();
+						} catch (IndexOutOfBoundsException outException) {
+							Toast.makeText(getApplicationContext(), "Conecte-se a um pinpad.", Toast.LENGTH_SHORT).show();
+						} catch (Exception e) {
+							Toast.makeText(getApplicationContext(),"Houve um erro inesperado. Tente novamente mais tarde.", Toast.LENGTH_SHORT).show();
+							e.printStackTrace();
 						}
-						public void onError() {
-							Toast.makeText(getApplicationContext(), "Um erro ocorreu durante a impressão", 1).show();
-						}
-					});
-                	printProvider.execute();
-                   }
-               })
+					}
+				})
                .setNegativeButton(R.string.list_dialog_cancel, new DialogInterface.OnClickListener() {
                    public void onClick(DialogInterface dialog, int id) {
                        	// lógica do cancelamento
@@ -107,7 +114,7 @@ public class TransactionListActivity extends ActionBarActivity implements OnItem
                				}
                				
                				public void onError() {
-               					Toast.makeText(getApplicationContext(), "Um erro ocorreu durante o cancelamento com a transacao de id:" + transacionId, 1).show();
+               					Toast.makeText(getApplicationContext(), "Um erro ocorreu durante o cancelamento com a transacao de id: " + transacionId, Toast.LENGTH_SHORT).show();
                				}
                			});
                			cancellationProvider.execute();

@@ -109,10 +109,10 @@ public class TransactionActivity extends ActionBarActivity {
 				
 				provider.setConnectionCallback(new StoneCallbackInterface() { // chamada de retorno.
 					public void onSuccess() {
-						Toast.makeText(getApplicationContext(), "Transacao enviada com sucesso e salva no banco. Para acessar, use o TransactionDAO.", 1).show();
+						Toast.makeText(getApplicationContext(), "Transação enviada com sucesso e salva no banco. Para acessar, use o TransactionDAO.", 1).show();
 					}
 					public void onError() {
-						Toast.makeText(getApplicationContext(), "Erro na transacao", 1).show();
+						Toast.makeText(getApplicationContext(), "Erro na transação", 1).show();
 						if (provider.theListHasError(ErrorsEnum.NEED_LOAD_TABLES) == true) { // code 20
 							LoadTablesProvider loadTablesProvider = new LoadTablesProvider(TransactionActivity.this, provider.getGcrRequestCommand());
 							loadTablesProvider.setDialogMessage("Subindo as tabelas");
@@ -122,7 +122,7 @@ public class TransactionActivity extends ActionBarActivity {
 									sendButton.performClick(); // simula um clique no botao de enviar transacao para reenviar a transacao.
 								}
 								public void onError() {
-									Toast.makeText(getApplicationContext(), "Foi garotao", 1).show();
+									Toast.makeText(getApplicationContext(), "Sucesso.", 1).show();
 								}
 							});
 							loadTablesProvider.execute();

@@ -26,6 +26,7 @@ public class DevicesActivity extends ActionBarActivity implements OnItemClickLis
 
 	ListView listView;
 	static BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+	static boolean btConnected = false;
 	
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -37,7 +38,7 @@ public class DevicesActivity extends ActionBarActivity implements OnItemClickLis
 		listBluetoothDevices();
 	}
 
-	private void listBluetoothDevices() {
+	public void listBluetoothDevices() {
 		
 		// lista de Pinpads para passar para o BluetoothConnectionProvider
 		ArrayAdapter<String> btArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1);
@@ -92,6 +93,7 @@ public class DevicesActivity extends ActionBarActivity implements OnItemClickLis
 			
 			public void onSuccess() {
 				Toast.makeText(getApplicationContext(), "Pinpad conectado", 1).show();
+				btConnected = true;
 				finish();
 			}
 			
