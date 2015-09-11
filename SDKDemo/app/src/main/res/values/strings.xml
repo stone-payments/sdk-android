@@ -1,0 +1,71 @@
+<resources>
+    <string name="app_name">SDK Demo Android Studio</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Main Activity strings -->
+    <!-- Titles -->
+    <string name="main_devices">Dispositivos pareados</string>
+    <string name="main_transaction">Fazer uma transação</string>
+    <string name="main_list">Listar transações</string>
+    <!-- Description -->
+    <string name="main_devices_description">Listar os dispositivos pareados</string>
+    <string name="main_transaction_description">Realiza uma nova transação</string>
+    <string name="main_list_description">Listar todas as transações do banco</string>
+    <string name="title_activity_transaction">Fazer transação</string>
+    <string name="title_activity_devices">Dispositivos pareados</string>
+    <string name="title_activity_transaction_list">Lista de transações</string>
+    <string name="title_activity_validation">Stone SDK Demo</string>
+    <string name="title_activity_main">Stone SDK Demonstração</string>
+    <string name="title_activity_send_email">Enviar e-mail</string>
+
+    <!-- Main Activity strings -->
+    <string name="transaction_enter_value">Digite o valor</string>
+    <string name="transaction_send_button">Enviar Transação</string>
+    <string name="transaction_value">Valor: </string>
+    <string name="transaction_debit">Débito</string>
+    <string name="transaction_credit">Crédito</string>
+    <string name="transaction_sight">A Vista</string>
+    <string name="transaction_installment">Parcelado</string>
+    <string name="transaction_issuer">Parcelado emissor</string>
+    <string name="transaction_no_installments">Nº de parcelas</string>
+
+    <!-- Transaction List Activity strings -->
+    <string name="list_dialog_title">Selecione uma ação</string>
+    <string name="list_dialog_message">Informe se deseja cancelar ou imprimir a transação selecionada.</string>
+    <string name="list_dialog_cancel">Cancelar transação</string>
+    <string name="list_dialog_print">Imprimir transação</string>
+
+    <!-- Transaction Activity strings -->
+    <string-array name="installments_array">
+        <item>À Vista</item>
+        <item>2x sem juros</item>
+        <item>3x sem juros</item>
+        <item>4x sem juros</item>
+        <item>5x sem juros</item>
+        <item>6x sem juros</item>
+        <item>7x sem juros</item>
+        <item>8x sem juros</item>
+        <item>9x sem juros</item>
+        <item>10x sem juros</item>
+        <item>11x sem juros</item>
+        <item>12x sem juros</item>
+        <item>2x com juros</item>
+        <item>3x com juros</item>
+        <item>4x com juros</item>
+        <item>5x com juros</item>
+        <item>6x com juros</item>
+        <item>7x com juros</item>
+        <item>8x com juros</item>
+        <item>9x com juros</item>
+        <item>10x com juros</item>
+        <item>11x com juros</item>
+        <item>12x com juros</item>
+    </string-array>
+
+    <!-- Send Email Activity strings -->
+    <string name="email_description">Digite um texto abaixo: </string>
+    <string name="email_hint">nome@seuemail.com.br</string>
+    <string name="email_send_description">Digite seu e-mail: </string>
+    <string name="email_send">Enviar e-mail</string>
+</resources>

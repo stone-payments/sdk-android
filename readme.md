@@ -31,6 +31,14 @@ Change Log
 
 Conteúdo:
 
+<i><b>v2.0.3</b></i>
+* [!] Hotfix nos tipos de conexão;
+* [!] Correções e melhorias na Demo;
+* [+] Documentação na pasta doc;
+* [+] Demo utilizando o Android Studio;
+* [+] Demo - exemplo do DisplayMessageProvider;
+
+
 <i><b>v2.0.2</b></i>
 * [!] Hotfix na impressão com Ingenico (Logo da Stone);
 * [!] Melhores tratamentos no bluetooth;
