@@ -34,7 +34,7 @@ Conteúdo:
 <i><b>v2.0.3</b></i>
 * [!] Hotfix nos tipos de conexão;
 * [!] Correções e melhorias na Demo;
-* [+] Documentação na pasta doc;
+* [+] Documentação na pasta [/doc/](https://github.com/stone-pagamentos/sdk-android-V2/tree/master/doc);
 * [+] Demo utilizando o Android Studio;
 * [+] Demo - exemplo do DisplayMessageProvider;
 
