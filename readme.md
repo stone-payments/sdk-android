@@ -32,9 +32,12 @@ Change Log
 Conteúdo:
 
 <i><b>v2.1.0</b></i>
+* [+] PrintReceiptProvider (imprime comprovante no padrão da Stone)
+* [+] ValidateTransactionByCardProvider (captura um cartão e retorna todas as transações passadas com ele)
 * [+] Ativação com multiplos Stone Codes;
 * [!] Corrigido o erro com Xamain;
-* [!] Corrigido problemas com impressões da Ingênico
+* [!] Corrigido problemas com impressões da Ingênico;
+* [#] Alguns Providers tiveram suas assinaturas modificados;
 
 
 <i><b>v2.0.3</b></i>
