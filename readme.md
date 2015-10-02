@@ -31,6 +31,12 @@ Change Log
 
 Conteúdo:
 
+<i><b>v2.1.0</b></i>
+* [+] Ativação com multiplos Stone Codes;
+* [!] Corrigido o erro com Xamain;
+* [!] Corrigido problemas com impressões da Ingênico
+
+
 <i><b>v2.0.3</b></i>
 * [!] Hotfix nos tipos de conexão;
 * [!] Correções e melhorias na Demo;
