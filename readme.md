@@ -31,6 +31,10 @@ Change Log
 
 Conteúdo:
 
+<i><b>v2.1.1</b></i>
+* [ ! ] Corrigida a Exception que era dada quando não havia conexão com um Pinpad no DisplayMessageProvider
+
+
 <i><b>v2.1.0</b></i>
 * [+] PrintReceiptProvider (imprime comprovante no padrão da Stone)
 * [+] ValidateTransactionByCardProvider (captura um cartão e retorna todas as transações passadas com ele)
