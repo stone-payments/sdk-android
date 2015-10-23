@@ -31,13 +31,21 @@ Change Log
 
 Conteúdo:
 
+<i><b>v2.1.2</b></i>
+* [ ! ] Melhorias no banco de transações (TransactionDAO) e Pinpads (PinpadDAO);
+* [ + ] Múltiplas conexões com Pinpads (1 device android para N Pinpads);
+* [ + ] Documentação atualizada;
+* [ & ] Melhorias gerais no gerenciamento de conexões Bluetooth;
+* [ # ] Alterações em alguns construtores
+
+
 <i><b>v2.1.1</b></i>
 * [ ! ] Corrigida a Exception que era dada quando não havia conexão com um Pinpad no DisplayMessageProvider
 
 
 <i><b>v2.1.0</b></i>
-* [+] PrintReceiptProvider (imprime comprovante no padrão da Stone)
-* [+] ValidateTransactionByCardProvider (captura um cartão e retorna todas as transações passadas com ele)
+* [+] PrintReceiptProvider (imprime comprovante no padrão da Stone);
+* [+] ValidateTransactionByCardProvider (captura um cartão e retorna todas as transações passadas com ele);
 * [+] Ativação com multiplos Stone Codes;
 * [!] Corrigido o erro com Xamain;
 * [!] Corrigido problemas com impressões da Ingênico;
