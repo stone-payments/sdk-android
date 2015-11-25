@@ -39,6 +39,17 @@ Conteúdo:
 * [ ! ] Correções em geral;
 * [ + ] Adição do método isConnectedToPinpad() na GlobalInformations;
 
+<i><b>Método de um parceiro:</b></i>
+```java
+
+  public static boolean isConnectedToPinpad() {
+        return GlobalInformations.getPinpadListSize() != null &&
+               GlobalInformations.getPinpadListSize() > 0     &&
+               GlobalInformations.getPinpadFromListAt(0) != null;
+  }
+
+```
+
 <i><b>v2.1.2</b></i>
 * [ ! ] Melhorias no banco de transações (TransactionDAO) e Pinpads (PinpadDAO);
 * [ + ] Múltiplas conexões com Pinpads (1 device android para N Pinpads);
