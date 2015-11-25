@@ -31,6 +31,14 @@ Change Log
 
 Conteúdo:
 
+<i><b>v2.1.3</b></i>
+* [ ! ] Atualizações no banco de transações;
+* [ ! ] Correções na impressão (QR Code com PAX);
+* [ + ] Remoção da logo da Stone do PrintProvider;
+* [ + ] Alteração do ambiente de homologação;
+* [ ! ] Correções em geral;
+* [ + ] Adição do método isConnectedToPinpad() na GlobalInformations;
+
 <i><b>v2.1.2</b></i>
 * [ ! ] Melhorias no banco de transações (TransactionDAO) e Pinpads (PinpadDAO);
 * [ + ] Múltiplas conexões com Pinpads (1 device android para N Pinpads);
