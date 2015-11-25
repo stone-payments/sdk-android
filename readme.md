@@ -41,7 +41,8 @@ Conteúdo:
 
 <i><b>Método de um parceiro:</b></i>
 ```java
-
+  // este método apenas verifica se a lista está ou não vazia,
+  // para testar a sua conexão com o Pinpad, aconselhamos que use o DisplayMessageProvider
   public static boolean isConnectedToPinpad() {
         return GlobalInformations.getPinpadListSize() != null &&
                GlobalInformations.getPinpadListSize() > 0     &&
