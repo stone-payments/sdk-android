@@ -1,27 +1,20 @@
 SDK V2 de integração - Android
 =======================
 
-Conteúdo:
 
 [/JARs/Stone/](https://github.com/stone-pagamentos/sdk-android-V2/tree/master/JARs/Stone) contém um único .jar com todas as seguintes dependências:
 <br>
 
-<i>Para envio de email</i>
-* Mail.jar
-* Activation.jar
-* additionnal.jar
-<br>
-
 <i>Base64 encoder</i>
-* commons-codec.jar
+* commons-codec
 <br>
 
 <i>JSON</i>
-* Gson_v1.7.2.jar
+* Gson 2.3
 <br>
 
 <i>XML</i>
-* Xstream_v1.4.7.jar
+* XStream v1.4.7
 
 [/JARs/Dependências/](https://github.com/stone-pagamentos/sdk-android-V2/tree/master/JARs) contém todas as libs mencionadas e o jar de integração da Stone.<br>
 Esta caso você possua essas libs no seu projeto, você tem a opção de remove-las e utilizar o jar da pasta /JARs/Stone/ ou adicionar as dependências e o jar de integração da Stone.
@@ -29,7 +22,16 @@ Esta caso você possua essas libs no seu projeto, você tem a opção de remove-
 Change Log
 =======================
 
-Conteúdo:
+
+<i><b>v2.1.4</b></i>
+* [ ! ] Homologações com o novo protocolo de conexão
+* [ ! ] Pequenas correções
+* [ ! ] Alteração da Gson 1.7.2 para Gson 2.3
+* [ + ] Adição do APK no repositório
+* [ + ] Adição do método de troca para o modo desenvolvedor
+```java
+  GlobalInformations.developerMode();
+```
 
 <i><b>v2.1.3</b></i>
 * [ ! ] Atualizações no banco de transações;
