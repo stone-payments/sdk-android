@@ -8,9 +8,9 @@
 ### Fat Jar
 > Um único .jar com todas as seguintes dependências:
 
-* commons-codec
-* Gson 2.3
-* XStream v1.4.7
+* commons-codec-1.9
+* gson-2.3
+* xstream_1.4.7
 
 ### Jar
 > Um jar com o código da Stone, mas todo as as dependências a parte devem conter em seu projeto.
@@ -19,4 +19,4 @@ Todas as dependências podem ser encontradas [aqui](https://github.com/stone-pag
 ---
 
 ### Change log
-Você pode acompanhar as alterações da SDK por  [aqui](https://github.com/stone-pagamentos/sdk-android-V2/tree/master/JARs).
+Você pode acompanhar as alterações da SDK por  [aqui](https://github.com/stone-pagamentos/sdk-android-V2/blob/master/JARs/changelog.md).
