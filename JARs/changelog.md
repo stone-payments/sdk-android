@@ -1,5 +1,10 @@
 # Change Log
 
+**v2.2.1**
+* Pequenas correções
+* Melhoria de desempenho no DB
+
+
 **v2.2.0**
 * Correções no `SendEmailProvider`
 * Adição do Provider `SendEmailTransactionProvider` para enviar comprovantes por email
