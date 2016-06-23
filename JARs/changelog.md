@@ -1,5 +1,9 @@
 # Change Log
 
+**v2.2.2**
+* Atualização do endpoint de teste
+
+
 **v2.2.1**
 * Pequenas correções
 * Melhoria de desempenho no DB
