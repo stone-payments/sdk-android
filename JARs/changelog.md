@@ -1,5 +1,10 @@
 # Change Log
 
+**v2.2.3**
+* Correções do ambiente de staging para integradores
+* Correções no email com transações parceladas
+
+
 **v2.2.2**
 * Atualização do endpoint de teste
 
