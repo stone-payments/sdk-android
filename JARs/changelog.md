@@ -1,5 +1,11 @@
 # Change Log
 
+**v2.2.4**
+* Melhorias nas transações com tarja
+* Correções no `BluetoothConnectionProvider`
+* Adição do erro `PINPAD_ALREADY_CONNECTED` quando se tenta criar conexão com um pinpad já conectado.
+* Outras pequenas correções
+
 **v2.2.3**
 * Correções do ambiente de staging para integradores
 * Correções no email com transações parceladas
