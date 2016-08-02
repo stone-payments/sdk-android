@@ -1,5 +1,9 @@
 # Change Log
 
+**v2.2.5**
+* Transações com tarja sem senha e com senha
+* Correções nas conexões com a internet
+
 **v2.2.4**
 * Melhorias nas transações com tarja
 * Correções no `BluetoothConnectionProvider`
