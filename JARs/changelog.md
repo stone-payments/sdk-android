@@ -1,5 +1,16 @@
 # Change Log
 
+**v2.2.6**
+* Opção de enviar uma transação não capturada
+
+```java
+StoneTransaction stoneTransaction = new StoneTransaction();
+// set dos valores da transação
+stoneTransaction.disableCapture(); // desabilita a captura da transação
+
+```
+> Por padrão a transação é capturada
+
 **v2.2.5**
 * Transações com tarja sem senha e com senha
 * Correções nas conexões com a internet
