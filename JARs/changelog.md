@@ -1,5 +1,8 @@
 # Change Log
 
+**v2.2.7**
+* Correções do erro `ClassNotFoundException` em algumas classes da SDK
+
 **v2.2.6**
 * Opção de enviar uma transação não capturada
 
