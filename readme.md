@@ -19,4 +19,4 @@ Todas as dependências podem ser encontradas [aqui](https://github.com/stone-pag
 ---
 
 ### Change log
-Você pode acompanhar as alterações da SDK por  [aqui](https://github.com/stone-pagamentos/sdk-android-V2/blob/master/JARs/changelog.md).
+Você pode acompanhar as alterações da SDK por [aqui](https://github.com/stone-pagamentos/sdk-android-V2/blob/master/JARs/changelog.md).
