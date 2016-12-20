@@ -1,5 +1,8 @@
 # Change Log
 
+**v2.2.8**
+* Suportando a bandeira Ticket
+
 **v2.2.7**
 * Correções do erro `ClassNotFoundException` em algumas classes da SDK
 
