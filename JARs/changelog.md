@@ -1,5 +1,8 @@
 # Change Log
 
+**v2.2.9**
+* Correção do ambiente de homologação
+
 **v2.2.8**
 * Suportando a bandeira Ticket
 
