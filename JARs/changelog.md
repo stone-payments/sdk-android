@@ -1,5 +1,9 @@
 # Change Log
 
+**v2.2.10**
+* Hot fix do endpoint do TMS
+* Correções de erro na ativação e download das tabelas AID e CAPK
+
 **v2.2.9**
 * Correção do ambiente de homologação
 
