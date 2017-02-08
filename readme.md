@@ -16,6 +16,9 @@
 > Um jar com o código da Stone, mas todo as as dependências a parte devem conter em seu projeto.
 Todas as dependências podem ser encontradas [aqui](https://github.com/stone-pagamentos/sdk-android-V2/tree/master/JARs).
 
+### Demo
+Você pode encontrar uma demo da SDK [nesse repositório](https://github.com/stone-pagamentos/demo-sdk-android).
+
 ---
 
 ### Change log
