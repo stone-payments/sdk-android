@@ -2,7 +2,6 @@
   <img src="http://www.stone.com.br/images/logo-big.png" alt="Stone Logo"/>
 </p>
 
-[![GitHub release](https://img.shields.io/github/release/stone-payments/sdk-android.svg)]()
 # SDK Android
 
 ### Instalação
