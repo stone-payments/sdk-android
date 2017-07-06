@@ -1,4 +1,16 @@
 # Change Log
+**v2.3.0**
+* Nova forma
+* Agora você pode definir qual ambiente você quer usar em runtime, usando
+```java
+Stone.setEnvironment(Environment.SANDBOX)
+//ou
+Stone.setEnvironment(Environment.PRODUCTION)
+```
+* `Stone.developerMode()` deprecated em prol do novo modo de escolha de ambiente mencionado acima.
+* Suporte para novas bandeiras: Elo, Alelo, Hiper, VR, Amex, etc. (Verifique disponibilidade da bandeira no seu stone code com o atendimento)
+* Correções no envio de algumas transações para stone.
+* Bug ao desconectar o pinpad fixed
 
 **v2.2.10**
 * Hot fix do endpoint do TMS
