@@ -1,6 +1,6 @@
 # Change Log
 **v2.3.0**
-* Nova forma
+* Nova forma de instalação da lib, utilizando aar (instruções detalhadas no README), em breve teremos um repositório para distribuir nossas bibliotecas!
 * Agora você pode definir qual ambiente você quer usar em runtime, usando
 ```java
 Stone.setEnvironment(Environment.SANDBOX)
