@@ -3,8 +3,10 @@
 * Nova forma de instalação da lib, utilizando aar (instruções detalhadas no README), em breve teremos um repositório para distribuir nossas bibliotecas!
 * Agora você pode definir qual ambiente você quer usar em runtime, usando
 ```java
+// para integração
 Stone.setEnvironment(Environment.SANDBOX)
-//ou
+
+// produção
 Stone.setEnvironment(Environment.PRODUCTION)
 ```
 * `Stone.developerMode()` deprecated em prol do novo modo de escolha de ambiente mencionado acima.
