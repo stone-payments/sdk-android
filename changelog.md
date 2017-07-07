@@ -8,7 +8,7 @@ Stone.setEnvironment(Environment.SANDBOX)
 Stone.setEnvironment(Environment.PRODUCTION)
 ```
 * `Stone.developerMode()` deprecated em prol do novo modo de escolha de ambiente mencionado acima.
-* Suporte para novas bandeiras: Elo, Alelo, Hiper, VR, Amex, etc. (Verifique disponibilidade da bandeira no seu stone code com o atendimento)
+* Suporte para novas bandeiras: Elo, Alelo. (Verifique disponibilidade da bandeira no seu stone code com o time de integrações)
 * Correções no envio de algumas transações para stone.
 * Bug ao desconectar o pinpad fixed
 
