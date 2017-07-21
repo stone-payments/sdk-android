@@ -15,7 +15,7 @@ flatDir {
 depois, adicione como dependência no módulo desejado:
 ```groovy
 dependencies {
-  compile(name: 'stone-sdk-2.3.0', ext: 'aar')
+  compile(name: 'stone-sdk-2.3.1', ext: 'aar')
 }
 ```
 
