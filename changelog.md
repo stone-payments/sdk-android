@@ -1,4 +1,11 @@
 # Change Log
+**v2.3.2**
+* Agora você pode desativar a SDK usando `deactivate()` em `ActiveApplicationProvider`
+* Método `execute()` do `ActiveApplicationProvider` descontinuado. Em vez disso, use o método `activate(List<String> stoneCodes)`
+* Corrigido bug em `LoadTablesProvider` no qual pedia um objeto desnecessário no construtor.
+* Novo campo `entryMode` no model da transação informando se a transação foi efetuada com chip ou tarja.
+* Campos e métodos descontinuados.
+
 **v2.3.1**
 * Corrigido problema na seleção do ambiente de `SANDBOX`
 
