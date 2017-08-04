@@ -1,15 +1,27 @@
 # Change Log
-**v2.3.2**
+### v2.4.0
+* Agora a SDK está em no artifactory! siga as instruções de instalação no readme.
+* Possibilidade de escolher o uso de Pinpads Elavon (que não possuem chaves Stone)
+* Todos os Providers recebem `Context` em vez de `Activity` no construtor
+* Nova interface `StoneActionCallback` com um método `void onStatusChanged(Action action)` para receber eventos adicionais do provider. Esta interface herda de StoneCallbackInterface, então seu uso é opcional. Por enquanto existem somente eventos para transação, mas em breve terá eventos para outros providers.
+
+###### Eventos disponíveis:
+- `TRANSACTION_WAITING_CARD` Esperando cartão ser inserido/passado
+- `TRANSACTION_WAITING_PASSWORD` Esperando senha do cartão (se houver)
+- `TRANSACTION_SENDING` Enviando transação para o servidor
+- `TRANSACTION_WAITING_REMOVE` Esperando a remoção do cartão do pinpad (se for chip)
+
+### v2.3.2
 * Agora você pode desativar a SDK usando `deactivate()` em `ActiveApplicationProvider`
 * Método `execute()` do `ActiveApplicationProvider` descontinuado. Em vez disso, use o método `activate(List<String> stoneCodes)`
 * Corrigido bug em `LoadTablesProvider` no qual pedia um objeto desnecessário no construtor.
 * Novo campo `entryMode` no model da transação informando se a transação foi efetuada com chip ou tarja.
 * Campos e métodos descontinuados.
 
-**v2.3.1**
+### v2.3.1
 * Corrigido problema na seleção do ambiente de `SANDBOX`
 
-**v2.3.0**
+### v2.3.0
 * Nova forma de instalação da lib, utilizando aar (instruções detalhadas no README), em breve teremos um repositório para distribuir nossas bibliotecas!
 * Agora você pode definir qual ambiente você quer usar em runtime, usando
 ```java
@@ -24,20 +36,20 @@ Stone.setEnvironment(Environment.PRODUCTION)
 * Correções no envio de algumas transações para stone.
 * Bug ao desconectar o pinpad fixed
 
-**v2.2.10**
+### v2.2.10
 * Hot fix do endpoint do TMS
 * Correções de erro na ativação e download das tabelas AID e CAPK
 
-**v2.2.9**
+### v2.2.9
 * Correção do ambiente de homologação
 
-**v2.2.8**
+### v2.2.8
 * Suportando a bandeira Ticket
 
-**v2.2.7**
+### v2.2.7
 * Correções do erro `ClassNotFoundException` em algumas classes da SDK
 
-**v2.2.6**
+### v2.2.6
 * Opção de enviar uma transação não capturada
 
 ```java
@@ -48,31 +60,31 @@ stoneTransaction.disableCapture(); // desabilita a captura da transação
 ```
 > Por padrão a transação é capturada
 
-**v2.2.5**
+### v2.2.5
 * Transações com tarja sem senha e com senha
 * Correções nas conexões com a internet
 
-**v2.2.4**
+### v2.2.4
 * Melhorias nas transações com tarja
 * Correções no `BluetoothConnectionProvider`
 * Adição do erro `PINPAD_ALREADY_CONNECTED` quando se tenta criar conexão com um pinpad já conectado.
 * Outras pequenas correções
 
-**v2.2.3**
+### v2.2.3
 * Correções do ambiente de staging para integradores
 * Correções no email com transações parceladas
 
 
-**v2.2.2**
+### v2.2.2
 * Atualização do endpoint de teste
 
 
-**v2.2.1**
+### v2.2.1
 * Pequenas correções
 * Melhoria de desempenho no DB
 
 
-**v2.2.0**
+### v2.2.0
 * Correções no `SendEmailProvider`
 * Adição do Provider `SendEmailTransactionProvider` para enviar comprovantes por email
 
@@ -89,7 +101,7 @@ emailTransactionProvider.execute();
 ```
 
 
-**v2.1.4**
+### v2.1.4
 * Homologações com o novo protocolo de conexão
 * Pequenas correções
 * Alteração da Gson 1.7.2 para Gson 2.3
@@ -99,7 +111,7 @@ emailTransactionProvider.execute();
   GlobalInformations.developerMode();
 ```
 
-**v2.1.3**
+### v2.1.3
 * Atualizações no banco de transações;
 * Correções na impressão (QR Code com PAX);
 * Remoção da logo da Stone do PrintProvider;
@@ -119,7 +131,7 @@ emailTransactionProvider.execute();
 
 ```
 
-**v2.1.2**
+### v2.1.2
 * Melhorias no banco de transações (TransactionDAO) e Pinpads (PinpadDAO);
 * Múltiplas conexões com Pinpads (1 device android para N Pinpads);
 * Documentação atualizada;
@@ -127,11 +139,11 @@ emailTransactionProvider.execute();
 * Alterações em alguns construtores
 
 
-**v2.1.1**
+### v2.1.1
 * Corrigida a Exception que era dada quando não havia conexão com um Pinpad no DisplayMessageProvider
 
 
-**v2.1.0**
+### v2.1.0
 * PrintReceiptProvider (imprime comprovante no padrão da Stone);
 * ValidateTransactionByCardProvider (captura um cartão e retorna todas as transações passadas com ele);
 * Ativação com multiplos Stone Codes;
@@ -140,7 +152,7 @@ emailTransactionProvider.execute();
 * Alguns Providers tiveram suas assinaturas modificados;
 
 
-**v2.0.3**
+### v2.0.3
 * Hotfix nos tipos de conexão;
 * Correções e melhorias na Demo;
 * Documentação na pasta [/doc/](https://github.com/stone-pagamentos/sdk-android-V2/tree/master/doc);
@@ -148,14 +160,14 @@ emailTransactionProvider.execute();
 * Demo - exemplo do DisplayMessageProvider;
 
 
-**v2.0.2**
+### v2.0.2
 * Hotfix na impressão com Ingenico (Logo da Stone);
 * Melhores tratamentos no bluetooth;
 * Melhorias na impressão (tratamentos para status diferente de 00);
 * Correções na Demo (Extra)
 
 
-**v2.0.1**
+### v2.0.1
 * Hotfix no QR Code com Pinpads da Ingenico;
 * Pequenas correções na transação (update na coluna 'request_id' da transação);
 * Adicionada a função que o integrador poder enviar o ITK (identificador único da transação) pelo método 'setInitiatorTransactionKey(SEU_ITK_AQUI_STRING)' do objeto StoneTransaction;
