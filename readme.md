@@ -6,14 +6,14 @@
 
 ### Instalação
 Primeiro, adicione o nosso repositório no `build.gradle` do seu projeto:
-```groovy
+``` gradle
 repositories {
   maven { url "https://packagecloud.io/stone/sdk-android/maven2" }
 }
 ```
 
 depois, adicione como dependência no módulo desejado:
-```groovy
+``` gradle
 dependencies {
   compile "br.com.stone:stone-sdk:$stone_sdk_version"
 }
