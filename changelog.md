@@ -1,4 +1,9 @@
 # Change Log
+### v2.4.1
+* Adicionando suporte para conexões via cabo (ethernet)
+* Campo `signature` em caso de necessidade de armazenar a assinatura da transação.
+* Melhorias de perfomance
+
 ### v2.4.0
 * Agora a SDK está em no artifactory! siga as instruções de instalação no readme.
 * Possibilidade de escolher o uso de Pinpads Elavon (que não possuem chaves Stone)
@@ -99,7 +104,6 @@ emailTransactionProvider.setEmailToSent("email@dominio.com");
 emailTransactionProvider.setDialogMessage("Enviando e-mail...");
 emailTransactionProvider.execute();
 ```
-
 
 ### v2.1.4
 * Homologações com o novo protocolo de conexão
