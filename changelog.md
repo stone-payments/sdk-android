@@ -1,4 +1,8 @@
 # Change Log
+
+### v2.4.2
+* Melhorias de perfomance
+
 ### v2.4.1
 * Adicionando suporte para conexões via cabo (ethernet)
 * Campo `signature` em caso de necessidade de armazenar a assinatura da transação.
