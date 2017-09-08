@@ -1,4 +1,24 @@
 # Change Log
+### v2.4.4
+* Melhoria e update das dependências
+* Personalização das mensagens exibidas no Pinpad. No `TransactionProvider`, dois novos métodos foram implementados
+
+###### Novos Métodos:
+- `setPinpadFeedbackMessage(PinpadFeedback key, String message)` para customizar uma mensagem específica
+- `setPinpadFeedbackMessages(Map<PinpadFeedback, String> pinpadFeedbackMessages)` para personalizar todas as mensagens de uma vez 
+
+##### Mensagens disponíveis para personalização e suas mensagens default (em comentário):
+```java
+PinpadFeedback.DENIED //"TRANSAC NEGADA"
+PinpadFeedback.PROCESSING //"PROCESSANDO.."
+PinpadFeedback.APPROVED //"TRANSAC APROVADA"
+PinpadFeedback.CARD_REMOVE //"RETIRE O CARTAO"
+PinpadFeedback.CARD_WITH_PROBLEMS //"ICC COM PROBLEMAS"
+PinpadFeedback.DENIED_BY_NET //"TRANSAC NEGADA PELA REDE"
+PinpadFeedback.CARD_INVALIDATED //"CARTAO ESTA INVALIDADO"
+PinpadFeedback.DENIED_BY_CARD //"TRANSAC NEGADA PELO CARTAO"
+```
+
 
 ### v2.4.2
 * Melhorias de perfomance
