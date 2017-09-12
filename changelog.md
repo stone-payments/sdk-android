@@ -1,4 +1,7 @@
 # Change Log
+### v2.4.5
+* Localização do `BluetoothConnectionProvider` corrigida.
+
 ### v2.4.4
 * Melhoria e update das dependências
 * Personalização das mensagens exibidas no Pinpad. No `TransactionProvider`, dois novos métodos foram implementados
