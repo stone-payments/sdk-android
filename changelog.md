@@ -1,4 +1,11 @@
 # Change Log
+### v2.4.6
+* Downgrade da targetSdkVersion de 26 para 25 devido a problemas de compatibilidade com APIs antigas
+* URL de ativação do ambiente `CERTIFICATION` alterada
+* Corrigido bug ao executar a migration de versões anteriores à 2.3.0
+* Downgrade da XStream para 1.4.7 devido a problemas com Java8 nas versões mais novas
+* Remoção da permissão `READ_PHONE_STATE` da SDK!
+
 ### v2.4.5
 * Localização do `BluetoothConnectionProvider` corrigida.
 
@@ -8,7 +15,7 @@
 
 ###### Novos Métodos:
 - `setPinpadFeedbackMessage(PinpadFeedback key, String message)` para customizar uma mensagem específica
-- `setPinpadFeedbackMessages(Map<PinpadFeedback, String> pinpadFeedbackMessages)` para personalizar todas as mensagens de uma vez 
+- `setPinpadFeedbackMessages(Map<PinpadFeedback, String> pinpadFeedbackMessages)` para personalizar todas as mensagens de uma vez
 
 ##### Mensagens disponíveis para personalização e suas mensagens default (em comentário):
 ```java
