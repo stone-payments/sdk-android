@@ -1,4 +1,28 @@
 # Change Log
+
+### v2.4.7
+* Adicionando o status `WITH_ERROR` para transações com erro e que precisam ser canceladas (ex: timeout)
+* Adicionando o `ReversalProvider` para varrer o banco de transações e cancelar as transações com o status `WITH_ERROR`
+* Correção no cancelamento de transações
+
+> exemplo do ReversalProvider 
+```java
+ReversalProvider reversalProvider = new ReversalProvider(this);
+reversalProvider.setDialogMessage("Cancelando transação com erro");
+reversalProvider.isDefaultUI();
+reversalProvider.setConnectionCallback(new StoneCallbackInterface() {
+      @Override
+      public void onSuccess() {
+        // code code code
+      }
+
+      @Override
+      public void onError() {
+        // code code code
+      }
+});
+```
+
 ### v2.4.6
 * Downgrade da targetSdkVersion de 26 para 25 devido a problemas de compatibilidade com APIs antigas
 * URL de ativação do ambiente `CERTIFICATION` alterada
