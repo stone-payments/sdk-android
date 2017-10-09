@@ -1,5 +1,10 @@
 # Change Log
 
+### v2.4.8
+* Adicionando `REVERSING_TRANSACTION_WITH_ERROR` ao enum `Action`
+* Revertendo transações automáticamente, quando ocorrer um erro
+> As transações que não foram processadas por um erro de conexão devem ter canceladas utilizando o `ReversalProvider`
+
 ### v2.4.7
 * Adicionando o status `WITH_ERROR` para transações com erro e que precisam ser canceladas (ex: timeout)
 * Adicionando o `ReversalProvider` para varrer o banco de transações e cancelar as transações com o status `WITH_ERROR`
