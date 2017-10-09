@@ -2,7 +2,7 @@
 
 ### v2.4.8
 * Adicionando `REVERSING_TRANSACTION_WITH_ERROR` ao enum `Action`
-* Revertendo transações automáticamente, quando ocorrer um erro
+* Revertendo transações automaticamente, quando ocorrer um erro
 > As transações que não foram processadas por um erro de conexão devem ter canceladas utilizando o `ReversalProvider`
 
 ### v2.4.7
