@@ -1,4 +1,14 @@
 # Change Log
+### v2.5.0
+- Permissões `android.permission.VIBRATE` e `android.permission.ACCESS_WIFI_STATE` removidas da SDK
+- Novos campos `cvm` e `serviceCode` no `TransactionObject`
+- appcompat-v7 atualizado para `26.1.0`
+- Enum de feedback `CARD_REMOVE` _deprecated_ por não ser uma mensagem alterável.
+- Enum de feedback `REVERSAL` _deprecated_ pois não mandamos nenhuma mensagem para o pinpad
+- Revertendo transações quando negado pelo cartão
+- Bug de mostrar mensagem `RETIRE O CARTÃO` em cartões mágnéticos fixed
+- gson atualizado de `2.8.1` para `2.8.2`
+- Várias melhorias de performance
 
 ### v2.4.8
 * Adicionando `REVERSING_TRANSACTION_WITH_ERROR` ao enum `Action`
@@ -10,7 +20,8 @@
 * Adicionando o `ReversalProvider` para varrer o banco de transações e cancelar as transações com o status `WITH_ERROR`
 * Correção no cancelamento de transações
 
-> exemplo do ReversalProvider 
+> exemplo do ReversalProvider
+
 ```java
 ReversalProvider reversalProvider = new ReversalProvider(this);
 reversalProvider.setDialogMessage("Cancelando transação com erro");
