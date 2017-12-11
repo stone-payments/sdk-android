@@ -1,4 +1,13 @@
 # Change Log
+### v2.5.1
+- SendEmailProvider depreciado em prol do uso do `SendEmailTransactionProvider`
+- Adicionado flag `merchantReceipt` (default false) pra informar se é pra enviar a via do cliente ou do estabelecimento no `SendEmailTransactionProvider`
+- Método `setEmailToSent` e `setEmailsToSent` da classe `SendEmailTransactionProvider` depreciado, usar `addTo()`/`setTo()` para setar o destinatário do email
+- Possibilidade de definir o remetente do email no SendEmailTransactionProvider no método `setFrom`
+- Adicionado campo `balance` no TransactionObject pra transações voucher (SODEXO, Ticket, etc...)
+- Bug de cartões (principalmente HIPER) retornando `UNKNOWN` fixed
+- Novos métodos (`findTransactionWithAuthorizationCode()`, `findTransactionWithInitiatorTransactionKey()` e `findTransactionByFilter()` ) no TransactionDAO para busca das transações no banco local da SDK.
+
 ### v2.5.0
 - Permissões `android.permission.VIBRATE` e `android.permission.ACCESS_WIFI_STATE` removidas da SDK
 - Novos campos `cvm` e `serviceCode` no `TransactionObject`
