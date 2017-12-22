@@ -1,4 +1,34 @@
 # Change Log
+### v2.5.2
+- Adicionado campo `cancellationDate` no `TransactionObject` para armazenar a data do cancelamento;
+- Adicionado campo `lastConnectionAt` no `PinpadObject` para armazenar a data da última vez que houve conexão com o pinpad;
+- Todos os erros durante a conexão com o device bluetooth que retornavam em dialog. Agora os erros são adicionados no array de erros do provider. Segue exemplo de uso:
+```Java8
+bluetoothConnectionProvider.setConnectionCallback(new StoneCallbackInterface() {
+
+    public void onSuccess() {
+        //handle success
+    }
+
+    public void onError() {
+        List<ErrorsEnum> listOfErrors = bluetoothConnectionProvider.getListOfErrors();
+        if (listOfErrors.contains(ErrorsEnum.PINPAD_ALREADY_CONNECTED)) {
+            //Do something
+        } else if (listOfErrors.contains(ErrorsEnum.TIME_OUT)) {
+            //Do something
+        } else if (listOfErrors.contains(ErrorsEnum.DEVICE_NOT_COMPATIBLE)) {
+            //Do something
+        } else if (listOfErrors.contains(ErrorsEnum.IO_ERROR_WITH_PINPAD)) {
+            //Do something
+        }
+    }
+});
+```
+- O método `Stone.getPinpadListSize()` não mais retorna `null` quando a lista de pinpads estiver vazia
+- Refatorado o gerenciamento das versões das tabelas, corrigindo o problema de carregar tabelas a cada transação;
+- Construtores `LoadTablesProvider(Context, GcrRequestCommand, PinpadObject)` e `LoadTablesProvider(Context, String, PinpadObject)` depreciados. Use `LoadTablesProvider(Context context, PinpadObject)` em vez disso;
+
+
 ### v2.5.1
 - SendEmailProvider depreciado em prol do uso do `SendEmailTransactionProvider`
 - Adicionado flag `merchantReceipt` (default false) pra informar se é pra enviar a via do cliente ou do estabelecimento no `SendEmailTransactionProvider`
