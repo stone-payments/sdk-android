@@ -1,4 +1,9 @@
 # Change Log
+### v2.5.3
+- Corrigido bug quando o `BluetoothConnectionProvider` disparava o evento `onSuccess` duplicado.
+- Corrigido bug da SDK baixando tabelas toda vez que abria o app.
+- Support Library atualizado para `27.0.2`.
+
 ### v2.5.2
 - Adicionado campo `cancellationDate` no `TransactionObject` para armazenar a data do cancelamento;
 - Adicionado campo `lastConnectionAt` no `PinpadObject` para armazenar a data da última vez que houve conexão com o pinpad;
