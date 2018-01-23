@@ -1,4 +1,9 @@
 # Change Log
+### v2.5.4
+- SDK com suporte oficial ELO
+- Enum `GENERIC_ERROR` utilizado pelo `ActiveApplicationProvider` para quando o stone code não é reconhecido foi alterado para `INVALID_STONE_CODE_OR_UNKNOWN`
+- 
+
 ### v2.5.3
 - Corrigido bug quando o `BluetoothConnectionProvider` disparava o evento `onSuccess` duplicado.
 - Corrigido bug da SDK baixando tabelas toda vez que abria o app.
