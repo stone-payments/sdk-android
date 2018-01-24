@@ -1,8 +1,13 @@
 # Change Log
-### v2.5.4
-- SDK com suporte oficial ELO
-- Enum `GENERIC_ERROR` utilizado pelo `ActiveApplicationProvider` para quando o stone code não é reconhecido foi alterado para `INVALID_STONE_CODE_OR_UNKNOWN`
-- 
+### 2.5.4-1
+- Corrigido bug onde a transação era efetuada mas não era salva no banco
+
+### 2.5.4
+- Correção na leitura de informações de cartões ELO.
+- Enum `GENERIC_ERROR` utilizado pelo `ActiveApplicationProvider` para quando o stone code não é reconhecido foi alterado para `INVALID_STONE_CODE_OR_UNKNOWN`.
+- Melhoria na estrutura interna e na performance do `TransactionProvider`.
+- Correção no envio do comprovante por email, colocando campo "assinatura" quando não era necessário.
+- Corrigido bug onde eventualmente o método `getListOfErrors()` retornava `null`
 
 ### v2.5.3
 - Corrigido bug quando o `BluetoothConnectionProvider` disparava o evento `onSuccess` duplicado.
