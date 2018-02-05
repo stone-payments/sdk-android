@@ -1,4 +1,12 @@
 # Change Log
+### 2.5.5
+- Adicionado campo `subMerchantAddress` no `TransactionObject` para editar o endereço do lojista que está efetuando a transação;
+- Adicionado campo `subMerchantCategoryCode` no `TransactionObject` para editar o mcc do lojista que está efetuando a transação;
+- Adicionado campo `shortName` no `TransactionObject` para armazenar em banco opção setada no campo `shortName` do `StoneTransaction`;
+- Adicionado campo `capture` no `TransactionObject` para armazenar em banco opção setada no campo `capture` do `StoneTransaction`;
+- Construtor `CancellationProvider(Context context, int idFromTransactionInBase, UserModel userModel)` depreciado. Em vez dele, use `CancellationProvider(Context context, TransactionObject transaction)`
+- Correção no migration da tabela de `Transaction` onde algumas colunas não estavam sendo inseridas quando atualizadas de versões muito antigas da SDK;
+
 ### 2.5.4-1
 - Corrigido bug onde a transação era efetuada mas não era salva no banco
 
