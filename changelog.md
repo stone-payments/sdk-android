@@ -1,4 +1,24 @@
 # Change Log
+### 2.5.6
+:brazil:
+---
+- Nova dependência OkHttp para substituir o `HttpUrlConnection` nas requests da SDK para nossos servidores;
+- Forçando TLS >= 1.2 em todas as requests da SDK;
+- Novo Provider `CaptureTransactionProvider` para capturar transações cuja requisição foi feita com captura posterior (setando `stoneTransaction.capture = false`);
+- Correção na efetuação de transações da bandeira `SODEXO`;
+- Melhoria na captura do `CVM` do pinpad, forçando o retorno;
+- Gerenciando o uso da chave Elavon/Stone internamente. Não é mais necessário setar `Stone.setAcquirer(Acquirer acquirer)`. Se o Pinpad não tiver nenhuma das duas chaves, a SDK retornará o erro `ErrorsEnum.PINPAD_WITHOUT_KEY` durante a conexão do pinpad no `BluetoothConnectionProvider`;
+- Novo ambiente `INTERNAL_CERTIFICATION` para validação do app pelo time de integrações da Stone;
+:us:
+---
+- New dependency OkHttp to replace `HttpUrlConnection` requests to our servers;
+- Forcing TLS >= 1.2 in all SDK requests;
+- New provider `CaptureTransactionProvider` to capture transactions which request was mad without capture (setting `stoneTransaction.capture = false`);
+- Fix in transactions with capture of brand `SODEXO`;
+- `CVM` capture from pinpad improved, forcing the return;
+- Managing the use of the Elavon/Stone key internally. It is no longer necessary to set `Stone.setAcquirer (Acquirer acquirer)`. If the Pinpad doesn't have any of the two keys, the SDK will return the `ErrorsEnum.PINPAD_WITHOUT_KEY` error while connecting the pinpad on` BluetoothConnectionProvider`;
+- New environment `INTERNAL_CERTIFICATION` for app validation by Stone integrations team;
+
 ### 2.5.5
 - Adicionado campo `subMerchantAddress` no `TransactionObject` para editar o endereço do lojista que está efetuando a transação;
 - Adicionado campo `subMerchantCategoryCode` no `TransactionObject` para editar o mcc do lojista que está efetuando a transação;
