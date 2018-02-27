@@ -9,6 +9,7 @@
 - Melhoria na captura do `CVM` do pinpad, forçando o retorno;
 - Gerenciando o uso da chave Elavon/Stone internamente. Não é mais necessário setar `Stone.setAcquirer(Acquirer acquirer)`. Se o Pinpad não tiver nenhuma das duas chaves, a SDK retornará o erro `ErrorsEnum.PINPAD_WITHOUT_KEY` durante a conexão do pinpad no `BluetoothConnectionProvider`;
 - Novo ambiente `INTERNAL_CERTIFICATION` para validação do app pelo time de integrações da Stone;
+
 :us:
 ---
 - New dependency OkHttp to replace `HttpUrlConnection` requests to our servers;
