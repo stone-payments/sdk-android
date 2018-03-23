@@ -1,4 +1,23 @@
 # Change Log
+### 2.5.7
+:brazil:
+---
+- Provider `CancellationProvider` agora retorna o actionCode do cancelamento pelo método `cancellationProvider.getActionCode()` e o status do cancelamento pelo `cancellationProvider.getResponseCodeEnum()`.
+- Métodos `getTransactionStatus()` e `getStatusAsString()` do `CancellationProvider` foram removidos em prol dos novos métodos citados acima.
+- Corrigido bug onde a mensagem de "Transação Aprovada" não aparecia no pinpad em algumas transações
+- Novo método `activate(String stoneCode)` para ativar e adicionar um novo stone code na lista de stone codes ativos.
+- Novo método `deactivate(String stoneCode)` para desativar somente um stone code da lista de ativos
+- Corrigido bug onde versões anteriores da SDK recebiam NPE em pinpads já salvos sem o campo novo `acqidx` do `PinpadObject`.
+
+:us:
+---
+- Provider `CancellationProvider` now returns the cancellation actionCode via `cancellationProvider.getActionCode()` and cancellation status via `cancellationProvider.getResponseCodeEnum()`.
+- Methods `getTransactionStatus()` and `getStatusAsString()` from `CancellationProvider` were removed for the use of the methods mentioned above.
+- Fixed bug where "Transação Aprovada" message did not appear on the pinpad in some transactions.
+- New method `activate(String stoneCode)` to activate and add a new stone code in the list of active stone codes.
+- New method `deactivate(String stoneCode)` to deactivate only one stone code from active list.
+- Fixed bug where earlier SDK versions was getting NPE on pinpads already stored without the new field `acqidx` on `PinpadObject`.
+
 ### 2.5.6
 :brazil:
 ---
