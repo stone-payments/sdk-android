@@ -1,7 +1,6 @@
 # CHANGELOG
 ### v2.5.7 (23/03/2018)
 :brazil:
----
 - Provider `CancellationProvider` agora retorna o actionCode do cancelamento pelo método `cancellationProvider.getActionCode()` e o status do cancelamento pelo `cancellationProvider.getResponseCodeEnum()`.
 - Métodos `getTransactionStatus()` e `getStatusAsString()` do `CancellationProvider` foram removidos em prol dos novos métodos citados acima.
 - Corrigido bug onde a mensagem de "Transação Aprovada" não aparecia no pinpad em algumas transações
@@ -10,7 +9,6 @@
 - Corrigido bug onde versões anteriores da SDK recebiam NPE em pinpads já salvos sem o campo novo `acqidx` do `PinpadObject`.
 
 :us:
----
 - Provider `CancellationProvider` now returns the cancellation actionCode via `cancellationProvider.getActionCode()` and cancellation status via `cancellationProvider.getResponseCodeEnum()`.
 - Methods `getTransactionStatus()` and `getStatusAsString()` from `CancellationProvider` were removed for the use of the methods mentioned above.
 - Fixed bug where "Transação Aprovada" message did not appear on the pinpad in some transactions.
@@ -20,7 +18,6 @@
 
 ### v2.5.6 (27/02/2018)
 :brazil:
----
 - Nova dependência OkHttp para substituir o `HttpUrlConnection` nas requests da SDK para nossos servidores;
 - Forçando TLS >= 1.2 em todas as requests da SDK;
 - Novo Provider `CaptureTransactionProvider` para capturar transações cuja requisição foi feita com captura posterior (setando `stoneTransaction.capture = false`);
@@ -30,7 +27,6 @@
 - Novo ambiente `INTERNAL_CERTIFICATION` para validação do app pelo time de integrações da Stone;
 
 :us:
----
 - New dependency OkHttp to replace `HttpUrlConnection` requests to our servers;
 - Forcing TLS >= 1.2 in all SDK requests;
 - New provider `CaptureTransactionProvider` to capture transactions which request was mad without capture (setting `stoneTransaction.capture = false`);
