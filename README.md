@@ -22,3 +22,6 @@ Você pode encontrar uma demo da SDK [nesse repositório](https://github.com/sto
 
 ### Changelog
 Você pode acompanhar as alterações da SDK [aqui](https://github.com/stone-pagamentos/sdk-android-V2/blob/master/changelog.md).
+
+### Documentação
+Você pode entender tudo sobre a SDK [aqui](http://sdkandroid.stone.com.br/).
