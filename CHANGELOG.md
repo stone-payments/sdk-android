@@ -1,5 +1,5 @@
-# Change Log
-### 2.5.7
+# CHANGELOG
+### v2.5.7 (23/03/2018)
 :brazil:
 ---
 - Provider `CancellationProvider` agora retorna o actionCode do cancelamento pelo método `cancellationProvider.getActionCode()` e o status do cancelamento pelo `cancellationProvider.getResponseCodeEnum()`.
@@ -18,7 +18,7 @@
 - New method `deactivate(String stoneCode)` to deactivate only one stone code from active list.
 - Fixed bug where earlier SDK versions was getting NPE on pinpads already stored without the new field `acqidx` on `PinpadObject`.
 
-### 2.5.6
+### v2.5.6 (27/02/2018)
 :brazil:
 ---
 - Nova dependência OkHttp para substituir o `HttpUrlConnection` nas requests da SDK para nossos servidores;
@@ -39,7 +39,7 @@
 - Managing the use of the Elavon/Stone key internally. It is no longer necessary to set `Stone.setAcquirer (Acquirer acquirer)`. If the Pinpad doesn't have any of the two keys, the SDK will return the `ErrorsEnum.PINPAD_WITHOUT_KEY` error while connecting the pinpad on` BluetoothConnectionProvider`;
 - New environment `INTERNAL_CERTIFICATION` for app validation by Stone integrations team;
 
-### 2.5.5
+### v2.5.5 (05/02/2018)
 - Adicionado campo `subMerchantAddress` no `TransactionObject` para editar o endereço do lojista que está efetuando a transação;
 - Adicionado campo `subMerchantCategoryCode` no `TransactionObject` para editar o mcc do lojista que está efetuando a transação;
 - Adicionado campo `shortName` no `TransactionObject` para armazenar em banco opção setada no campo `shortName` do `StoneTransaction`;
@@ -47,22 +47,22 @@
 - Construtor `CancellationProvider(Context context, int idFromTransactionInBase, UserModel userModel)` depreciado. Em vez dele, use `CancellationProvider(Context context, TransactionObject transaction)`
 - Correção no migration da tabela de `Transaction` onde algumas colunas não estavam sendo inseridas quando atualizadas de versões muito antigas da SDK;
 
-### 2.5.4-1
+### v2.5.4-1 (24/01/2018)
 - Corrigido bug onde a transação era efetuada mas não era salva no banco
 
-### 2.5.4
+### v2.5.4 
 - Correção na leitura de informações de cartões ELO.
 - Enum `GENERIC_ERROR` utilizado pelo `ActiveApplicationProvider` para quando o stone code não é reconhecido foi alterado para `INVALID_STONE_CODE_OR_UNKNOWN`.
 - Melhoria na estrutura interna e na performance do `TransactionProvider`.
 - Correção no envio do comprovante por email, colocando campo "assinatura" quando não era necessário.
 - Corrigido bug onde eventualmente o método `getListOfErrors()` retornava `null`
 
-### v2.5.3
+### v2.5.3 (29/12/2017)
 - Corrigido bug quando o `BluetoothConnectionProvider` disparava o evento `onSuccess` duplicado.
 - Corrigido bug da SDK baixando tabelas toda vez que abria o app.
 - Support Library atualizado para `27.0.2`.
 
-### v2.5.2
+### v2.5.2 (22/12/2017)
 - Adicionado campo `cancellationDate` no `TransactionObject` para armazenar a data do cancelamento;
 - Adicionado campo `lastConnectionAt` no `PinpadObject` para armazenar a data da última vez que houve conexão com o pinpad;
 - Todos os erros durante a conexão com o device bluetooth que retornavam em dialog. Agora os erros são adicionados no array de erros do provider. Segue exemplo de uso:
@@ -92,7 +92,7 @@ bluetoothConnectionProvider.setConnectionCallback(new StoneCallbackInterface() {
 - Construtores `LoadTablesProvider(Context, GcrRequestCommand, PinpadObject)` e `LoadTablesProvider(Context, String, PinpadObject)` depreciados. Use `LoadTablesProvider(Context context, PinpadObject)` em vez disso;
 
 
-### v2.5.1
+### v2.5.1 (11/12/2017)
 - SendEmailProvider depreciado em prol do uso do `SendEmailTransactionProvider`
 - Adicionado flag `merchantReceipt` (default false) pra informar se é pra enviar a via do cliente ou do estabelecimento no `SendEmailTransactionProvider`
 - Método `setEmailToSent` e `setEmailsToSent` da classe `SendEmailTransactionProvider` depreciado, usar `addTo()`/`setTo()` para setar o destinatário do email
@@ -101,7 +101,7 @@ bluetoothConnectionProvider.setConnectionCallback(new StoneCallbackInterface() {
 - Bug de cartões (principalmente HIPER) retornando `UNKNOWN` fixed
 - Novos métodos (`findTransactionWithAuthorizationCode()`, `findTransactionWithInitiatorTransactionKey()` e `findTransactionByFilter()` ) no TransactionDAO para busca das transações no banco local da SDK.
 
-### v2.5.0
+### v2.5.0 (25/10/2017)
 - Permissões `android.permission.VIBRATE` e `android.permission.ACCESS_WIFI_STATE` removidas da SDK
 - Novos campos `cvm` e `serviceCode` no `TransactionObject`
 - appcompat-v7 atualizado para `26.1.0`
@@ -117,7 +117,7 @@ bluetoothConnectionProvider.setConnectionCallback(new StoneCallbackInterface() {
 * Revertendo transações automaticamente, quando ocorrer um erro
 > As transações que não foram processadas por um erro de conexão devem ter canceladas utilizando o `ReversalProvider`
 
-### v2.4.7
+### v2.4.7 (28/09/2017)
 * Adicionando o status `WITH_ERROR` para transações com erro e que precisam ser canceladas (ex: timeout)
 * Adicionando o `ReversalProvider` para varrer o banco de transações e cancelar as transações com o status `WITH_ERROR`
 * Correção no cancelamento de transações
@@ -141,17 +141,17 @@ reversalProvider.setConnectionCallback(new StoneCallbackInterface() {
 });
 ```
 
-### v2.4.6
+### v2.4.6 (28/09/2017)
 * Downgrade da targetSdkVersion de 26 para 25 devido a problemas de compatibilidade com APIs antigas
 * URL de ativação do ambiente `CERTIFICATION` alterada
 * Corrigido bug ao executar a migration de versões anteriores à 2.3.0
 * Downgrade da XStream para 1.4.7 devido a problemas com Java8 nas versões mais novas
 * Remoção da permissão `READ_PHONE_STATE` da SDK!
 
-### v2.4.5
+### v2.4.5 (12/09/2017)
 * Localização do `BluetoothConnectionProvider` corrigida.
 
-### v2.4.4
+### v2.4.4 (08/09/2017)
 * Melhoria e update das dependências
 * Personalização das mensagens exibidas no Pinpad. No `TransactionProvider`, dois novos métodos foram implementados
 
@@ -172,15 +172,15 @@ PinpadFeedback.DENIED_BY_CARD //"TRANSAC NEGADA PELO CARTAO"
 ```
 
 
-### v2.4.2
+### v2.4.2 (22/08/2017)
 * Melhorias de perfomance
 
-### v2.4.1
+### v2.4.1 (14/08/2017)
 * Adicionando suporte para conexões via cabo (ethernet)
 * Campo `signature` em caso de necessidade de armazenar a assinatura da transação.
 * Melhorias de perfomance
 
-### v2.4.0
+### v2.4.0 (04/08/2017)
 * Agora a SDK está em no artifactory! siga as instruções de instalação no readme.
 * Possibilidade de escolher o uso de Pinpads Elavon (que não possuem chaves Stone)
 * Todos os Providers recebem `Context` em vez de `Activity` no construtor
@@ -192,17 +192,17 @@ PinpadFeedback.DENIED_BY_CARD //"TRANSAC NEGADA PELO CARTAO"
 - `TRANSACTION_SENDING` Enviando transação para o servidor
 - `TRANSACTION_WAITING_REMOVE` Esperando a remoção do cartão do pinpad (se for chip)
 
-### v2.3.2
+### v2.3.2 (28/07/2017)
 * Agora você pode desativar a SDK usando `deactivate()` em `ActiveApplicationProvider`
 * Método `execute()` do `ActiveApplicationProvider` descontinuado. Em vez disso, use o método `activate(List<String> stoneCodes)`
 * Corrigido bug em `LoadTablesProvider` no qual pedia um objeto desnecessário no construtor.
 * Novo campo `entryMode` no model da transação informando se a transação foi efetuada com chip ou tarja.
 * Campos e métodos descontinuados.
 
-### v2.3.1
+### v2.3.1 (21/07/2017)
 * Corrigido problema na seleção do ambiente de `SANDBOX`
 
-### v2.3.0
+### v2.3.0 (06/07/2017)
 * Nova forma de instalação da lib, utilizando aar (instruções detalhadas no README), em breve teremos um repositório para distribuir nossas bibliotecas!
 * Agora você pode definir qual ambiente você quer usar em runtime, usando
 ```java
