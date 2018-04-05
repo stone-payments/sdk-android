@@ -1,4 +1,17 @@
 # CHANGELOG
+### 2.5.8 (05/04/2018)
+:brazil:
+- Timeout das requests http aumentado para 1 minuto
+- Corrigido bug da SDK deixar 2 ou mais stone codes iguais ficarem ativos no `ActiveApplicationProvider`
+- Adicionado stacktrace das exceptions no `BluetoothConnectionProvider`
+
+:us:
+- Http requests timeout increased to 1 minute
+- Fixed bug when the SDK accepts 2 or more identical stone codes be activated on `ActiveApplicationProvider`
+- Added exceptions stacktrace on `BluetoothConnectionProvider`
+
+---
+
 ### v2.5.7 (23/03/2018)
 :brazil:
 - Provider `CancellationProvider` agora retorna o actionCode do cancelamento pelo método `cancellationProvider.getActionCode()` e o status do cancelamento pelo `cancellationProvider.getResponseCodeEnum()`.
