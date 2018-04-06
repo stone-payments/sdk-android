@@ -34,7 +34,7 @@
 ### v2.5.6 (27/02/2018)
 :brazil:
 - Nova dependência OkHttp para substituir o `HttpUrlConnection` nas requests da SDK para nossos servidores;
-- Forçando TLS >= 1.2 em todas as requests da SDK;
+- Suporte ao TLS >= 1.2 em versões do android <= 4.4 (KitKat);
 - Novo Provider `CaptureTransactionProvider` para capturar transações cuja requisição foi feita com captura posterior (setando `stoneTransaction.capture = false`);
 - Correção na efetuação de transações da bandeira `SODEXO`;
 - Melhoria na captura do `CVM` do pinpad, forçando o retorno;
@@ -43,7 +43,7 @@
 
 :us:
 - New dependency OkHttp to replace `HttpUrlConnection` requests to our servers;
-- Forcing TLS >= 1.2 in all SDK requests;
+- Supporting TLS >= 1.2 on androids <= 4.4 (KitKat);
 - New provider `CaptureTransactionProvider` to capture transactions which request was mad without capture (setting `stoneTransaction.capture = false`);
 - Fix in transactions with capture of brand `SODEXO`;
 - `CVM` capture from pinpad improved, forcing the return;
