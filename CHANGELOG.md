@@ -1,5 +1,5 @@
 # CHANGELOG
-### 2.5.8 (05/04/2018)
+### v2.5.8 (05/04/2018)
 :brazil:
 - Timeout das requests http aumentado para 1 minuto
 - Corrigido bug da SDK deixar 2 ou mais stone codes iguais ficarem ativos no `ActiveApplicationProvider`
