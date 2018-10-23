@@ -1,4 +1,51 @@
 # CHANGELOG
+
+### v2.6.0
+:brazil:
+- Corrigido bug onde informações novas vindas de qualquer request travava a SDK, não retornando um status de erro.
+- Novos campos no `StoneTransaction` para editar as informações do lojista que está efetuando a transação (modelo subadquirente):
+```java
+stoneTransaction.subMerchantCity = "city" //Cidade do sub-merchant
+stoneTransaction.subMerchantPostalAddress = "00000000" //CEP do sub-merchant (Apenas números)
+stoneTransaction.subMerchantRegisteredIdentifier = "00000000" // Identificador do sub-merchant
+stoneTransaction.subMerchantTaxIdentificationNumber = "33368443000199" // CNPJ do sub-merchant (apenas números)
+```
+
+:us:
+- Fixed bug where new information coming from any request was freezing the SDK, not returning any error status.
+- New fields in `StoneTransaction` to change merchant info that is doing the transaction (subacquirer model):
+```java
+stoneTransaction.subMerchantCity = "city" // sub-merchant city
+stoneTransaction.subMerchantPostalAddress = "00000000" // sub-merchant postal code (only numbers)
+stoneTransaction.subMerchantRegisteredIdentifier = "00000000" // sub-merchant identifier
+stoneTransaction.subMerchantTaxIdentificationNumber = "33368443000199" // sub-merchant Tax Identification (only numbers)
+```
+
+---
+
+### v2.5.9 (05/04/2018)
+:brazil:
+- Agora não é mais necessário usar o `LoadTablesProvider` para efetuar a carga de tabelas no Pinpad, todo o gerenciamento será feito internamente pela SDK.
+- Enum `TABLES_NOT_FOUND` depreciado por não ser mais disparado.
+- Enum `NEED_LOAD_TABLES` depreciado por não ser mais disparado.
+- Provider `DownloadTablesProvider` removido por não ter mais utilidade.
+- Corrigido bug onde o enum `PINPAD_ALREADY_CONNECTED` não era chamado ao conectar com um pinpad já conectado.
+- Corrigido bug no `BluetoothConnectionProvider` que causava crash no app se ocorresse um erro desconhecido.
+- Melhoria na detecção das bandeiras.
+- Corrigido problema na migration do banco de pinpads quando atualizado de versões muito antigas da SDK.
+
+:us:
+- Is no longer required to use `LoadTablesProvider` to load tables on pinpad, the SDK will handle everything internally.
+- Enum `TABLES_NOT_FOUND` deprecated for not being triggered anymore.
+- Enum `NEED_LOAD_TABLES` deprecated for not being triggered anymore.
+- Provider `DownloadTablesProvider` removed because it is no longer useful.
+- Fixed bug where enum `PINPAD_ALREADY_CONNECTED` was not called when connecting with a pinpad already connected.
+- Fixed bug in `BluetoothConnectionProvider` which caused crash in the app if an unknown error occurred.
+- Improvement on card brands detection.
+- Fixed Pinpad database migration problem when upgrading from older SDK versions.
+
+---
+
 ### v2.5.8 (05/04/2018)
 :brazil:
 - Timeout das requests http aumentado para 1 minuto
