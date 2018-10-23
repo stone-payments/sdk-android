@@ -5,20 +5,20 @@
 - Corrigido bug onde informações novas vindas de qualquer request travava a SDK, não retornando um status de erro.
 - Novos campos no `StoneTransaction` para editar as informações do lojista que está efetuando a transação (modelo subadquirente):
 ```java
-stoneTransaction.subMerchantCity = "city" //Cidade do sub-merchant
-stoneTransaction.subMerchantPostalAddress = "00000000" //CEP do sub-merchant (Apenas números)
-stoneTransaction.subMerchantRegisteredIdentifier = "00000000" // Identificador do sub-merchant
-stoneTransaction.subMerchantTaxIdentificationNumber = "33368443000199" // CNPJ do sub-merchant (apenas números)
+stoneTransaction.setSubMerchantCity("city") //Cidade do sub-merchant
+stoneTransaction.setSubMerchantPostalAddress("00000000") //CEP do sub-merchant (Apenas números)
+stoneTransaction.setSubMerchantRegisteredIdentifier("00000000") // Identificador do sub-merchant
+stoneTransaction.setSubMerchantTaxIdentificationNumber("33368443000199") // CNPJ do sub-merchant (apenas números)
 ```
 
 :us:
 - Fixed bug where new information coming from any request was freezing the SDK, not returning any error status.
 - New fields in `StoneTransaction` to change merchant info that is doing the transaction (subacquirer model):
 ```java
-stoneTransaction.subMerchantCity = "city" // sub-merchant city
-stoneTransaction.subMerchantPostalAddress = "00000000" // sub-merchant postal code (only numbers)
-stoneTransaction.subMerchantRegisteredIdentifier = "00000000" // sub-merchant identifier
-stoneTransaction.subMerchantTaxIdentificationNumber = "33368443000199" // sub-merchant Tax Identification (only numbers)
+stoneTransaction.setSubMerchantCity("city") // sub-merchant city
+stoneTransaction.setSubMerchantPostalAddress("00000000") // sub-merchant postal code (only numbers)
+stoneTransaction.setSubMerchantRegisteredIdentifier("00000000") // sub-merchant identifier
+stoneTransaction.setSubMerchantTaxIdentificationNumber("33368443000199") // sub-merchant Tax Identification (only numbers)
 ```
 
 ---
